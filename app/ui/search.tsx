@@ -12,7 +12,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     searchFunction: typeof handleSearch,
     interval: number = 300
   ) {
-    let timer: any;
+    let timer: ReturnType<typeof setTimeout>;
     return function (term: string) {
       if (timer) {
         clearTimeout(timer);
